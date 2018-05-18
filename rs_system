@@ -1,0 +1,12 @@
+#!/usr/bin/python2
+import socket
+d=socket.socket(socket.AF_INET,socket.SOCK_DGRAM)
+rec_ip="192.168.10.68"
+myport=9333
+d.bind((rec_ip,myport))
+while 4>0 :
+      x=d.recvfrom(1000)
+      print x[0]
+      y=raw_input("reply :")
+      d.sendto(y,(x[1]))
+
