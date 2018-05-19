@@ -1,0 +1,15 @@
+#!/usr/bin/python3
+from sklearn import tree 
+
+x=[[22,34],[34,23],[300,356],[234,278]]
+y=["x","x","y","y"]
+
+algo=tree.DecisionTreeClassifier()
+
+trained=algo.fit(x,y)
+a=input("Enter test data : ")
+b=input()
+t=[a,b]
+result=trained.predict([t])
+print(result)
+
